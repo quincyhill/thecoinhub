@@ -16,33 +16,19 @@ const NavLinkContainer = ({ children }: NavLinkProps) => {
   )
 }
 
-const NotificationsDropDown = () => {
-  // when the user clicks the button, show the dropdown
+// use relative / absolute positioning for this
+const ExploreDropDown = () => {
+  // Show when user hovers over the explore navlink
   return (
-    <div className="flex flex-col rounded-md shadow-sm">
-      <span className="font-semibodl text-xl">Notifications</span>
-      <ul>
-        <li className="rounded-sm bg-slate-100 ">All</li>
-        <li className="rounded-sm bg-slate-100 ">Likes</li>
-        <li className="rounded-sm bg-slate-100 ">Comments</li>
-        <li className="rounded-sm bg-slate-100 ">Mentions</li>
-        <li className="rounded-sm bg-slate-100 ">Followers</li>
-      </ul>
-      <ul>
-        <li className="flex flex-row">
-          <img className="bg-green-200 w-6 h-6" />
-          <div>
-            <span className="font-semibold">Users who liked your comment</span>
-            <span className="text-slate-400">Your comment</span>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <ul className="flex flex-col rounded-md shadow-sm">
+      <li className="rounded-sm bg-slate-100 ">All NFTs</li>
+      <li className="rounded-sm bg-slate-100 ">Collectables</li>
+    </ul>
   )
 }
 
 export default function Header() {
-  const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
+  const [exploreDropdownIsOpen, setExploreDropdownIsOpen] = useState(false)
 
   // container class is nice
 
@@ -66,7 +52,17 @@ export default function Header() {
             <li>
               <NavLinkContainer>
                 <Link href="/explore">
-                  <a>Explore</a>
+                  <a
+                    onMouseEnter={() => {
+                      setExploreDropdownIsOpen(true)
+                    }}
+                    onMouseLeave={() => {
+                      setExploreDropdownIsOpen(false)
+                    }}
+                  >
+                    <span>Explore</span>
+                    {exploreDropdownIsOpen && <ExploreDropDown />}
+                  </a>
                 </Link>
               </NavLinkContainer>
             </li>

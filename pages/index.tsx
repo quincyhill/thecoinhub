@@ -3,9 +3,9 @@ import type { NextPage } from 'next'
 const Home: NextPage = () => {
   return (
     <div className="flex flex-col">
-      <section id="hero-section">
+      <section className="relative flex flex-row justify-center">
         <img className="w-full h-96 bg-green-200" />
-        <div className="flex flex-row">
+        <div className="container flex flex-row absolute top-0 m-8">
           <div className="w-1/2 flex flex-col">
             <span className="font-semibold text-4xl">
               Discover Crypto, trade NFTs
@@ -27,10 +27,10 @@ const Home: NextPage = () => {
             <div className="w-full flex flex-col">
               <img className="h-24 bg-green-400" />
               <div className="flex flex-row">
-                <div className="w-1/12">
+                <div className="mr-2">
                   <img className="w-12 h-12 rounded-full bg-rose-200" />
                 </div>
-                <div className="w-11/12 flex flex-col">
+                <div className="flex flex-col">
                   <span>Artpiece Name</span>
                   <span>User</span>
                 </div>

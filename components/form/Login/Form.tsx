@@ -1,4 +1,5 @@
 import { useForm, SubmitHandler } from 'react-hook-form'
+// This will be replaced with loggin in with a wallet like meta mask
 
 interface FormInput {
   username: string

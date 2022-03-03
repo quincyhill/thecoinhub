@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react'
 import Link from 'next/link'
 import { ThemeButton } from '..'
-import { CloudUpload, Send, ChatSquare } from 'react-bootstrap-icons'
+import { Person, Wallet2 } from 'react-bootstrap-icons'
 import { SearchForm } from '../../form'
 
 interface NavLinkProps {
@@ -44,10 +44,12 @@ const NotificationsDropDown = () => {
 export default function Header() {
   const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
 
+  // container class is nice
+
   return (
     <nav className="bg-white dark:bg-slate-900 border-b-2 border-slate-200 px-2 py-4">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <div>
+      <div className="container flex flex-row items-center mx-auto">
+        <div className="w-2/12">
           <Link href="/">
             <a className="flex">
               <span className="self-center text-lg font-semibold whitespace-nowrap text-slate-900 dark:text-slate-100 hover:text-rose-600 dark:hover:text-rose-600">
@@ -56,34 +58,37 @@ export default function Header() {
             </a>
           </Link>
         </div>
-        <div className="hidden sm:flex sm:flex-row">
+        <div className="hidden sm:flex sm:flex-row sm:w-6/12">
           <SearchForm />
         </div>
-        <div>
+        <div className="sm:w-4/12 flex flex-row justify-end">
           <ul className="flex flex-row mt-4 text-sm font-medium">
             <li>
               <NavLinkContainer>
-                <Link href="/upload">
-                  <a>
-                    <CloudUpload className="w-6 h-6" />
-                  </a>
+                <Link href="/explore">
+                  <a>Explore</a>
                 </Link>
               </NavLinkContainer>
             </li>
             <NavLinkContainer>
-              <Link href="/messages">
+              <Link href="/ranking">
+                <a>Ranking</a>
+              </Link>
+            </NavLinkContainer>
+            <NavLinkContainer>
+              <Link href="/about">
+                <a>About</a>
+              </Link>
+            </NavLinkContainer>
+            <NavLinkContainer>
+              <Link href="/login">
                 <a>
-                  <Send className="w-6 h-6" />
+                  <Person className="w-6 h-6" />
                 </a>
               </Link>
             </NavLinkContainer>
             <NavLinkContainer>
-              <button>
-                <ChatSquare className="w-6 h-6" />
-              </button>
-            </NavLinkContainer>
-            <NavLinkContainer>
-              <ThemeButton />
+              <Wallet2 className="w-6 h-6 cursor-pointer" />
             </NavLinkContainer>
           </ul>
         </div>

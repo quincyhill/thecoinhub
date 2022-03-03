@@ -18,19 +18,17 @@ const Form = () => {
 
   return (
     <form
-      className="w-80 flex flex-row text-sm"
+      className="sm:w-full flex flex-row text-sm"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="">
-        <input
-          type="text"
-          id="name"
-          className="bg-white dark:bg-slate-900 border border-slate-300 dark:border-transparent rounded-lg block w-full p-2.5"
-          required
-          placeholder="Phone number, username, or email"
-          {...register('query')}
-        />
-      </div>
+      <input
+        type="text"
+        id="name"
+        className="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-transparent rounded-lg block p-2.5"
+        required
+        placeholder="Search Items, collections, and accounts"
+        {...register('query')}
+      />
       <button
         type="submit"
         className="focus:ring-4 font-medium rounded-lg text-sm pl-2"

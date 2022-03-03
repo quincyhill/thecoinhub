@@ -14,8 +14,8 @@ export default function Layout({ children }: Props) {
   const setTheme = () => {
     // checks if dark mode is enabled
     if (
-      localStorage.getItem('postmeifyproject:theme') === 'dark' ||
-      (!('postmeifyproject:theme' in localStorage) &&
+      localStorage.getItem('thecoinhub:theme') === 'dark' ||
+      (!('thecoinhub:theme' in localStorage) &&
         window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
       document.documentElement.classList.add('dark')
@@ -35,7 +35,7 @@ export default function Layout({ children }: Props) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Official site of Postmeify" />
         <meta name="og:title" content={siteTitle} />
-        <title>Postmeify</title>
+        <title>The Coinhub</title>
       </Head>
       <div className="sticky top-0 z-50">
         <Header />

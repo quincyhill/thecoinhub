@@ -10,7 +10,7 @@ interface NavLinkProps {
 
 const NavLinkContainer = ({ children }: NavLinkProps) => {
   return (
-    <div className="flex items-center text-sm mx-4 my-0 text-slate-500 dark:text-slate-100 font-semibold tracking-wide pb-1 border-b-2 border-transparent hover:border-rose-600 hover:text-rose-600 dark:hover:text-rose-600">
+    <div className="flex items-center text-sm mx-4 my-0 text-slate-500 dark:text-slate-100 font-semibold tracking-wide pb-1 border-b-2 border-transparent hover:border-teal-600 hover:text-teal-600 dark:hover:text-teal-600">
       {children}
     </div>
   )
@@ -52,7 +52,7 @@ export default function Header() {
         <div className="w-2/12">
           <Link href="/">
             <a className="flex">
-              <span className="self-center text-lg font-semibold whitespace-nowrap text-slate-900 dark:text-slate-100 hover:text-rose-600 dark:hover:text-rose-600">
+              <span className="self-center text-lg font-semibold whitespace-nowrap text-slate-900 dark:text-slate-100 hover:text-teal-600 dark:hover:text-teal-600">
                 THE COINHUB
               </span>
             </a>
@@ -71,8 +71,8 @@ export default function Header() {
               </NavLinkContainer>
             </li>
             <NavLinkContainer>
-              <Link href="/ranking">
-                <a>Ranking</a>
+              <Link href="/rankings">
+                <a>Rankings</a>
               </Link>
             </NavLinkContainer>
             <NavLinkContainer>

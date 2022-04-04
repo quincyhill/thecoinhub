@@ -38,7 +38,7 @@ const Form = () => {
         <input
           type="text"
           id="name"
-          className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-transparent rounded-lg block w-full p-2.5"
+          className="bg-white border border-neutral-300  rounded-lg block w-full p-2.5"
           required
           {...register('name')}
         />
@@ -50,7 +50,7 @@ const Form = () => {
         <input
           type="email"
           id="email"
-          className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-transparent rounded-lg block w-full p-2.5"
+          className="bg-white  border border-neutral-300  rounded-lg block w-full p-2.5"
           placeholder="user@mail.com"
           required
           {...register('email')}
@@ -63,7 +63,7 @@ const Form = () => {
         <input
           type="text"
           id="subject"
-          className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-transparent rounded-lg block w-full p-2.5"
+          className="bg-white  border border-neutral-300  rounded-lg block w-full p-2.5"
           required
           {...register('subject')}
         />
@@ -74,7 +74,7 @@ const Form = () => {
         </label>
         <textarea
           id="message"
-          className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-transparent rounded-lg block w-full p-2.5"
+          className="bg-white  border border-neutral-300  rounded-lg block w-full p-2.5"
           required
           {...register('message')}
         />

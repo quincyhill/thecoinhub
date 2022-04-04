@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Header, Footer } from '..'
+import { Header, Footer } from '../common'
 import { useEffect } from 'react'
 
 import Head from 'next/head'
@@ -11,22 +11,9 @@ interface Props {
 }
 
 export default function Layout({ children }: Props) {
-  const setTheme = () => {
-    // checks if dark mode is enabled
-    if (
-      localStorage.getItem('thecoinhub:theme') === 'dark' ||
-      (!('thecoinhub:theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }
-
   useEffect(() => {
     // sets theme every time the page is loaded
-    setTheme()
+    // something else
   }, [])
 
   return (

@@ -6,10 +6,6 @@ export interface CryptoCurrency {
   change24hr: number
 }
 
-export interface CryptoCurrencyList extends Array<CryptoCurrency> {
-  [id: number]: CryptoCurrency
-}
-
 // The user type
 export interface User {
   uuid?: string
@@ -17,8 +13,4 @@ export interface User {
   username: string
   displayName?: string
   href: string
-}
-
-export interface UserList extends Array<User> {
-  [id: number]: User
 }

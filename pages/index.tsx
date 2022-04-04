@@ -1,6 +1,9 @@
-import type { NextPage } from 'next'
+import { useEffect, useState } from 'react'
 
-const Home: NextPage = () => {
+export default function Index() {
+  useEffect(() => {
+    // some stuff in here
+  }, [])
   return (
     <div className="flex flex-col">
       <section className="relative flex flex-row justify-center">
@@ -22,7 +25,6 @@ const Home: NextPage = () => {
               </button>
             </div>
           </div>
-          {/* this is going to be a card so eventaully move it to its own component */}
           <div className="w-1/2 flex flex-row bg-green-200">
             <div className="w-full flex flex-col">
               <img className="h-24 bg-green-400" />
@@ -42,5 +44,3 @@ const Home: NextPage = () => {
     </div>
   )
 }
-
-export default Home

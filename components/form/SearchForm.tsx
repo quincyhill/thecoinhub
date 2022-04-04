@@ -24,7 +24,7 @@ const Form = () => {
       <input
         type="text"
         id="name"
-        className="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-transparent rounded-lg block p-2.5"
+        className="w-full bg-white  border border-slate-300  rounded-lg block p-2.5"
         required
         placeholder="Search Items, collections, and accounts"
         {...register('query')}

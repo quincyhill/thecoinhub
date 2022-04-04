@@ -1,6 +1,10 @@
 import { RankingsForm } from '../components/form'
+import { useEffect, useState } from 'react'
 
 export default function RankingsPage() {
+  useEffect(() => {
+    // some stuff in here too
+  }, [])
   return (
     <div className="flex flex-col items-center">
       <section className="flex flex-col items-center mt-4">
